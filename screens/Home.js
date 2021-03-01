@@ -20,7 +20,7 @@ const Home = ({ navigation }) => {
   const [transactionHistory, setTransactionHistory] = useState(dummyData.transactionHistory);
 
   useEffect(() => {
-    LogBox.ignoreLogs(['VirtualizedList should not be nested']);
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }, []);
 
   function renderHeader() {
@@ -35,6 +35,7 @@ const Home = ({ navigation }) => {
           borderRadius: 10,
           backgroundColor: COLORS.white
         }}
+        onPress={() => navigation.navigate('CryptoDetail', {currency: item})}
       >
         {/* Currency */}
         <View style={{ flexDirection: 'row' }}>
