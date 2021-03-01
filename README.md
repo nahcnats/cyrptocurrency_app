@@ -6,7 +6,18 @@ Objective of this project is to explore different ways to organize my code and m
 
 ## Screenshots
 
-Coming soon.
+<div align="center">
+  <div style="display: flex; align-items: flex-start; padding-horizontal: 1rem">
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-02-26 at 18.27.05.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-02-26 at 18.28.59.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-02-26 at 18.29.10.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-03-01 at 20.12.54.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-03-01 at 20.12.57.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-03-01 at 20.13.24.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-03-01 at 20.13.26.png" width="20%"/>
+    <img src="https://github.com/nahcnats/screenshots/blob/main/cryptocurrency_app/Simulator Screen Shot - iPhone 11 - 2021-03-01 at 20.13.39.png" width="20%"/>
+  </div>
+</div>
 
 # Installation
 
