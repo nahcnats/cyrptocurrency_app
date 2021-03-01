@@ -7,7 +7,7 @@ import {
   ScrollView
 } from 'react-native';
 
-import { HeaderBar, CurrencyLabel, TextButton, TransactionHistory } from '../components';
+import { HeaderBar, CurrencyLabel, TextButton, TransactionHistory, Card } from '../components';
 import { dummyData, COLORS, SIZES, FONTS } from '../constants';
 
 const Transaction = ({route }) => {
@@ -20,14 +20,14 @@ const Transaction = ({route }) => {
 
   function renderTrade() {
     return(
-      <View
+      <Card
         style={{
           marginTop: SIZES.padding,
-          marginHorizontal: SIZES.padding,
+          // marginHorizontal: SIZES.padding,
           padding: SIZES.padding,
-          borderRadius: SIZES.radius,
+          // borderRadius: SIZES.radius,
           backgroundColor: COLORS.white,
-          ...styles.shadow
+          // ...styles.shadow
         }}
       >
         <CurrencyLabel
@@ -50,7 +50,7 @@ const Transaction = ({route }) => {
           label='Trade'
           onPress={() => console.log('Trade')}
         />
-      </View>
+      </Card>
     );
   }
 
@@ -88,17 +88,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
-    },
-    shadow: {
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
-        shadowOpacity: 0.30,
-        shadowRadius: 4.65,
-
-        elevation: 8,
     }
 })
 

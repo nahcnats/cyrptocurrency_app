@@ -4,20 +4,17 @@ import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 // import constants
 import { COLORS, SIZES, FONTS, icons } from '../constants';
 
+import {TouchableCard} from '../components'
+
 const PriceAlert = ({ customContainerStyle }) => {
   return (
-    <TouchableOpacity
+    <TouchableCard
       style={{
         flexDirection: 'row',
         alignItems: 'center',
         marginTop: SIZES.padding * 4.5,
-        marginHorizontal: SIZES.padding,
-        paddingVertical: SIZES.padding,
-        paddingVertical: SIZES.radius,
         backgroundColor: COLORS.white,
-        borderRadius: SIZES.radius,
         ...customContainerStyle,
-        ...styles.shadow
       }}
     >
       <Image
@@ -39,21 +36,8 @@ const PriceAlert = ({ customContainerStyle }) => {
           tintColor: COLORS.gray
         }}
       />
-    </TouchableOpacity>
+    </TouchableCard>
   );
 }
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4
-    },
-    shadowRadius: 0.30,
-    shadowRadius: 4.65,
-    elevation: 8
-  }
-});
 
 export default PriceAlert;

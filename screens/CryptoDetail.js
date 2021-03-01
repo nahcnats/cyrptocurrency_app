@@ -4,7 +4,6 @@ import {
   SafeAreaView,
   View,
   Text,
-  TouchableOpacity,
   Image,
   ScrollView,
   Animated
@@ -18,7 +17,7 @@ import {
 
 import { VictoryCustomTheme } from '../styles';
 import { dummyData, COLORS, SIZES, FONTS, icons } from '../constants';
-import { HeaderBar, CurrencyLabel, TextButton, PriceAlert } from '../components';
+import { HeaderBar, CurrencyLabel, TextButton, PriceAlert, Card } from '../components';
 
 const CryptoDetail = ({ route, navigation }) => {
   const scrollX = new Animated.Value(0);
@@ -91,14 +90,12 @@ const CryptoDetail = ({ route, navigation }) => {
 
   function renderChart() {
     return (
-      <View
+      <Card
         style={{
           marginTop: SIZES.padding,
           marginHorizontal: SIZES.radius,
           alignItems: 'center',
-          borderRadius: SIZES.radius,
           backgroundColor: COLORS.white,
-          ...styles.shadow
         }}
       >
         {/* Header */}
@@ -237,20 +234,18 @@ const CryptoDetail = ({ route, navigation }) => {
         </View>
         {/* Dots */}
         { renderDots() }
-      </View>
+      </Card>
     );
   }
 
   function renderBuy() {
     return (
-      <View
+      <Card
         style={{
           marginTop: SIZES.padding,
           marginHorizontal: SIZES.radius,
           padding: SIZES.radius,
-          borderRadius: SIZES.radius,
           backgroundColor: COLORS.white,
-          ...styles.shadow
         }}
       >
         <View
@@ -290,25 +285,23 @@ const CryptoDetail = ({ route, navigation }) => {
           label='Buy'
           onPress={() => navigation.navigate('Transaction', {currency: selectedCurrency})}
         />
-      </View>
+      </Card>
     );
   }
 
   function renderAbout() {
     return (
-      <View
+      <Card
         style={{
           marginTop: SIZES.padding,
           marginHorizontal: SIZES.radius,
-          padding: SIZES.radius,
-          borderRadius: SIZES.radius,
           backgroundColor: COLORS.white,
-          ...styles.shadow
+          padding: SIZES.radius,
         }}
       >
         <Text style={{...FONTS.h3}}>About {selectedCurrency?.currency}</Text>
         <Text style={{marginTop: SIZES.base, ...FONTS.body3}}>{ selectedCurrency?.description }</Text>
-      </View>
+      </Card>
     );
   }
 
@@ -349,17 +342,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
-    },
-    shadow: {
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
-        shadowOpacity: 0.30,
-        shadowRadius: 4.65,
-
-        elevation: 8,
     }
 })
 

@@ -4,7 +4,9 @@ import { Text, View, FlatList, TouchableOpacity, Image } from 'react-native';
 // import constant
 import { COLORS, SIZES, FONTS, icons } from '../constants';
 
-const TransactionHistory = ({ customContainerStyle, history }) => {
+import { Card } from '../components';
+
+const TransactionHistory = ({ history }) => {
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={{
@@ -48,14 +50,11 @@ const TransactionHistory = ({ customContainerStyle, history }) => {
   );
 
   return (
-    <View
+    <Card
       style={{
         marginTop: SIZES.padding,
-        marginHorizontal: SIZES.padding,
         padding: 20,
-        borderRadius: SIZES.radius,
         backgroundColor: COLORS.white,
-        ...customContainerStyle
       }}
     >
       <Text style={{ ...FONTS.h2 }}>Transaction History</Text>    
@@ -80,7 +79,7 @@ const TransactionHistory = ({ customContainerStyle, history }) => {
           )
         }}
       />
-    </View>
+    </Card>
   );
 }
 

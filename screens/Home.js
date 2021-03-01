@@ -11,7 +11,7 @@ import {
   LogBox
 } from 'react-native';
 
-import { PriceAlert, TransactionHistory } from '../components';
+import { PriceAlert, TransactionHistory, TouchableCard, Card } from '../components';
 
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
 
@@ -25,14 +25,12 @@ const Home = ({ navigation }) => {
 
   function renderHeader() {
     const renderItem = ({ item, index }) => (
-      <TouchableOpacity
+      <TouchableCard
         style={{
           width: 180,
-          paddingVertical: SIZES.padding,
           paddingHorizontal: SIZES.padding,
           marginLeft: index == 0 ? SIZES.padding : 0,
           marginRight: SIZES.radius,
-          borderRadius: 10,
           backgroundColor: COLORS.white
         }}
         onPress={() => navigation.navigate('CryptoDetail', {currency: item})}
@@ -73,7 +71,7 @@ const Home = ({ navigation }) => {
             {item.changes}
           </Text>
         </View>
-      </TouchableOpacity>
+      </TouchableCard>
     )
 
     return (
@@ -170,14 +168,10 @@ const Home = ({ navigation }) => {
 
   function renderNotice() {
     return (
-      <View
+      <Card
         style={{
           marginTop: SIZES.padding,
-          marginHorizontal: SIZES.padding,
-          padding: 20,
-          borderRadius: SIZES.radius,
           backgroundColor: COLORS.secondary,
-          ...styles.shadow
         }}
       >
         <Text style={{ color: COLORS.white, ...FONTS.h3 }}>Investing Safety</Text>
@@ -201,7 +195,7 @@ const Home = ({ navigation }) => {
             Learn More
           </Text>
         </TouchableOpacity>
-      </View>
+      </Card>
     );
   }
 
