@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Text, View, Image } from 'react-native';
 
 // import constants
 import { COLORS, SIZES, FONTS, icons } from '../constants';
@@ -16,6 +16,7 @@ const PriceAlert = ({ customContainerStyle }) => {
         backgroundColor: COLORS.white,
         ...customContainerStyle,
       }}
+      onPress={() => console.log('Price Alert')}
     >
       <Image
         source={icons.notification_color}
